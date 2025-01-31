@@ -1,0 +1,12 @@
+2025-01-31 12:52:14,374 - INFO - ✅ Successfully connected to the PostgreSQL database.
+2025-01-31 12:52:14,375 - INFO - PostgreSQL version: {db_version[0]}
+2025-01-31 12:56:29,496 - INFO - ✅ Successfully connected to the PostgreSQL database.
+2025-01-31 12:56:29,496 - INFO - PostgreSQL version: {db_version[0]}
+2025-01-31 12:56:29,508 - INFO - ✅ Table 'medical_businesses' created successfully (or already exists).
+2025-01-31 13:01:34,458 - INFO - ✅ Successfully connected to the PostgreSQL database.
+2025-01-31 13:01:34,459 - INFO - PostgreSQL version: {db_version[0]}
+2025-01-31 13:01:34,459 - ERROR - ❌ Connection failed: [Errno 2] No such file or directory: './Data/preprocesses/medical_telegram_data.csv'
+2025-01-31 13:02:05,840 - INFO - ✅ Successfully connected to the PostgreSQL database.
+2025-01-31 13:02:05,841 - INFO - PostgreSQL version: {db_version[0]}
+2025-01-31 13:02:05,876 - INFO - ✅ Data successfully inserted from CSV.
+2025-01-31 13:02:05,876 - INFO - ✅ Table 'medical_businesses' created successfully (or already exists).

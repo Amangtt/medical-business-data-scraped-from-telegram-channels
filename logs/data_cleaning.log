@@ -1,0 +1,38 @@
+2025-01-30 19:12:00,475 - ERROR - ❌ Error loading CSV file: [Errno 2] No such file or directory: './telegram_data.csv'
+2025-01-30 19:12:43,656 - ERROR - ❌ Error loading CSV file: [Errno 2] No such file or directory: './telegram_data.csv'
+2025-01-30 19:13:02,388 - ERROR - ❌ Data cleaning error: 'int' object has no attribute 'drop_duplicates'
+2025-01-30 19:30:32,508 - INFO - ✅ Duplicates removed from dataset.
+2025-01-30 19:30:32,515 - INFO - ✅ Date column formatted to datetime.
+2025-01-30 19:30:32,516 - INFO - ✅ Missing values filled.
+2025-01-30 19:30:32,533 - INFO - ✅ Text columns standardized.
+2025-01-30 19:30:32,566 - INFO - ✅ Emojis extracted and stored in 'emoji_used' column.
+2025-01-30 19:30:32,628 - INFO - ✅ YouTube links extracted and stored in 'youtube_links' column.
+2025-01-30 19:30:32,631 - INFO - ✅ Data cleaning completed successfully.
+2025-01-30 19:30:32,634 - ERROR - ❌ Data cleaning error: Cannot save file into a non-existent directory: 'Data/preprocessed'
+2025-01-30 19:31:37,047 - INFO - ✅ CSV file '/Users/amantebeje/Desktop/projects/medical-business-data-scraped-from-telegram-channels/telegram_data.csv' loaded successfully.
+2025-01-30 19:32:35,091 - INFO - ✅ CSV file '/Users/amantebeje/Desktop/projects/medical-business-data-scraped-from-telegram-channels/telegram_data.csv' loaded successfully.
+2025-01-30 19:32:52,926 - INFO - ✅ Duplicates removed from dataset.
+2025-01-30 19:32:52,937 - INFO - ✅ Date column formatted to datetime.
+2025-01-30 19:32:52,939 - INFO - ✅ Missing values filled.
+2025-01-30 19:32:52,960 - INFO - ✅ Text columns standardized.
+2025-01-30 19:32:52,995 - INFO - ✅ Emojis extracted and stored in 'emoji_used' column.
+2025-01-30 19:32:53,057 - INFO - ✅ YouTube links extracted and stored in 'youtube_links' column.
+2025-01-30 19:32:53,060 - INFO - ✅ Data cleaning completed successfully.
+2025-01-30 19:32:53,063 - ERROR - ❌ Data cleaning error: Cannot save file into a non-existent directory: 'Data/preprocessed'
+2025-01-30 19:33:40,729 - INFO - ✅ CSV file '/Users/amantebeje/Desktop/projects/medical-business-data-scraped-from-telegram-channels/telegram_data.csv' loaded successfully.
+2025-01-30 19:33:45,198 - INFO - ✅ Duplicates removed from dataset.
+2025-01-30 19:33:45,208 - INFO - ✅ Date column formatted to datetime.
+2025-01-30 19:33:45,211 - INFO - ✅ Missing values filled.
+2025-01-30 19:33:45,232 - INFO - ✅ Text columns standardized.
+2025-01-30 19:33:45,267 - INFO - ✅ Emojis extracted and stored in 'emoji_used' column.
+2025-01-30 19:33:45,327 - INFO - ✅ YouTube links extracted and stored in 'youtube_links' column.
+2025-01-30 19:33:45,330 - INFO - ✅ Data cleaning completed successfully.
+2025-01-30 19:33:45,332 - ERROR - ❌ Data cleaning error: Cannot save file into a non-existent directory: 'Data/preprocessed'
+2025-01-30 19:34:45,320 - INFO - ✅ CSV file '/Users/amantebeje/Desktop/projects/medical-business-data-scraped-from-telegram-channels/telegram_data.csv' loaded successfully.
+2025-01-30 19:35:49,349 - INFO - ✅ Duplicates removed from dataset.
+2025-01-30 19:35:49,391 - INFO - ✅ Date column formatted to datetime.
+2025-01-30 19:35:49,394 - INFO - ✅ Missing values filled.
+2025-01-30 19:35:49,411 - INFO - ✅ Text columns standardized.
+2025-01-30 19:35:49,443 - INFO - ✅ Emojis extracted and stored in 'emoji_used' column.
+2025-01-30 19:35:49,508 - INFO - ✅ YouTube links extracted and stored in 'youtube_links' column.
+2025-01-30 19:35:49,511 - INFO - ✅ Data cleaning completed successfully.
