@@ -7,7 +7,7 @@ The repository is organized into the following directories:
 
 - `.github/workflows/`: Contains configurations for GitHub Actions, enabling continuous integration and automated testing.
 - `.vscode/`: Configuration files for the Visual Studio Code editor, optimizing the development environment.
-- `app`: Contains the implementation of the machine learning model API, allowing interaction with the model through RESTful endpoints.
+- `api`: Contains the implementation of the machine learning model API, allowing interaction with the model through RESTful endpoints.
 - `notebooks/`: Jupyter notebooks used for tasks such as data exploration, feature engineering, and preliminary modeling.
 - `scripts/`: Python scripts for data preprocessing, feature extraction, and the implementation of the credit scoring model.
 - `tests/`: Unit tests to ensure the correctness and robustness of the implemented model and data processing logic.
@@ -19,8 +19,8 @@ To run the project locally, follow these steps:
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/epythonlab/EthiomedDataWarehouse.git
-    cd EthiomedDataWarehouse
+    git clone https://github.com/Amangtt/medical-business-data-scraped-from-telegram-channels.git
+    cd medical-business-data-scraped-from-telegram-channels
     ```
 
 2. **Set up the Virtual Environment:**
@@ -53,15 +53,15 @@ To run the project locally, follow these steps:
 
 ### Task 1: Scraping Data from Telegram Channels
 
-- Navigate to the `scripts/` directory and run `telegram_scraper`.
+- Navigate to the `scripts/` directory and run `scrapper`.
 - Ensure that the required libraries are installed and store the API ID and hash in the `.env` file.
-- Next, run `data_cleaner.py` to auto-clean the data.
-- Once cleaned, run `store_data.py`.
+- Next, run `preprocess.py` to auto-clean the data.
+- Once cleaned, run `database_setup.py`.
 - Ensure you create a database in your PostgreSQL database and store credentials in the `.env` file, then start the PostgreSQL server.
 
 ### Task 2: Data Transformation using DBT
 
-- Go to the `ethio_medical_project` directory and explore the DBT configurations.
+- Go to the `medical-business-data-scraped-from-telegram-channels` directory and explore the DBT configurations.
 - Run the DBT commands:
 
     ```bash
