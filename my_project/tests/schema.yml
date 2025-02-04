@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_medical_data
+    columns:
+      - name: emoji_used
+        tests:
+          - not_null
+      - name: message_id
+        tests:
+          - unique
+          - not_null
+      - name: message_date
+        tests:
+          - not_null
+      - name: channel_username
+        tests:
+          - not_null
