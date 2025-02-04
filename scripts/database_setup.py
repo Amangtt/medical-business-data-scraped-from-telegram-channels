@@ -5,6 +5,7 @@ from sqlalchemy import create_engine, text
 import pandas as pd
 import psycopg2
 CSV_FILE_PATH="./Data/preprocessed/medical_telegram_data.csv"
+CSV_OBJECT_PATH='./detections.csv'
 # Configure logging to write to file & display in Jupyter Notebook
 logging.basicConfig(
     level=logging.INFO,
@@ -59,22 +60,65 @@ try:
         youtube_links TEXT 
     );
     """
+    
     cursor.execute(create_table_query)
-
-     # Load CSV into the table using COPY
-    with open(CSV_FILE_PATH, "r", encoding="utf-8") as file:
-        next(file)  # Skip the header row
-        cursor.copy_expert(
-            "COPY medical_businesses(channel_title, channel_username, message_id, message,message_date,media_path,emoji_used,youtube_links) FROM STDIN WITH CSV HEADER",
-            file
-        )
-    
-    
-  
     connection.commit()
-   
     logging.info("✅ Table 'medical_businesses' created successfully (or already exists).")
-    logging.info("✅ Data successfully inserted from CSV.")
+
+    cursor.execute("SELECT COUNT(*) FROM medical_businesses;")
+    row_count = cursor.fetchone()[0]
+    
+    
+    # Create table for object detection 
+    create_object_detection="""
+    CREATE TABLE IF NOT EXISTS Object_detection (
+    id SERIAL PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    class_label VARCHAR(100) NOT NULL,
+    confidence FLOAT,
+    bbox TEXT
+);
+"""
+    cursor.execute(create_object_detection)
+    connection.commit()
+    logging.info("✅ Table Object_detection created successfully (or already exists).")
+
+
+  
+    cursor.execute("SELECT COUNT(*) FROM Object_detection;")
+    obj_row_count = cursor.fetchone()[0]
+    
+    if row_count == 0:
+        logging.info("Table empty lodding data")
+        # Load CSV into the table using COPY
+        with open(CSV_FILE_PATH, "r", encoding="utf-8") as file:
+            next(file)  # Skip the header row
+            cursor.copy_expert(
+                "COPY medical_businesses(channel_title, channel_username, message_id, message,message_date,media_path,emoji_used,youtube_links) FROM STDIN WITH CSV HEADER",
+                file
+            )
+        connection.commit()
+        logging.info("✅ Data successfully inserted from CSV.")
+    else:
+        logging.info("Table contains file aborting loading")
+    
+    if obj_row_count == 0:
+        logging.info("Table empty lodding data")
+        # Load CSV into the table using COPY
+        with open(CSV_OBJECT_PATH, "r", encoding="utf-8") as file:
+            next(file)  # Skip the header row
+            cursor.copy_expert(
+                "COPY Object_detection(filename,class_label,confidence,bbox) FROM STDIN WITH CSV HEADER",
+                file
+            )
+        connection.commit()
+        logging.info("✅ Data successfully inserted from CSV.")
+    else:
+        logging.info("Table contains file aborting loading")
+    
+    
+   
+    
 
 except Exception as e:
     logging.error(f"❌ Connection failed: {e}")
