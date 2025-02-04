@@ -10,3 +10,10 @@
 2025-01-31 13:02:05,841 - INFO - PostgreSQL version: {db_version[0]}
 2025-01-31 13:02:05,876 - INFO - ✅ Data successfully inserted from CSV.
 2025-01-31 13:02:05,876 - INFO - ✅ Table 'medical_businesses' created successfully (or already exists).
+2025-02-03 14:18:19,778 - INFO - ✅ Successfully connected to the PostgreSQL database.
+2025-02-03 14:18:19,779 - INFO - PostgreSQL version: {db_version[0]}
+2025-02-03 14:18:19,781 - INFO - ✅ Table 'medical_businesses' created successfully (or already exists).
+2025-02-03 14:18:19,799 - INFO - ✅ Table Object_detection created successfully (or already exists).
+2025-02-03 14:18:19,802 - INFO - Table contains file aborting loading
+2025-02-03 14:18:19,802 - INFO - Table empty lodding data
+2025-02-03 14:18:19,818 - INFO - ✅ Data successfully inserted from CSV.
